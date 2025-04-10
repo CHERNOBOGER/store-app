@@ -24,14 +24,16 @@ const ProductDetail = () => {
     if (!product) return <div>Product not found</div>;
 
     return (
-        <div className="product-detail">
-            <h1>{product.title}</h1>
-            <img src={product.image} alt={product.title} className="product-image" />
-            <p className="product-price">${product.price}</p>
-            <p className="product-description">{product.description}</p>
-            <RatingStars rating={product.rating.rate} />
+        <div className="product-detail-container">
+            <div className="product-detail">
+                <h1>{product.title}</h1>
+                <img src={product.image} alt={product.title} className="product-image" />
+                <p className="product-price">${product.price}</p>
+                <p className="product-description">{product.description}</p>
+                <RatingStars rating={product.rating.rate} />
+            </div>
             <button onClick={() => navigate(-1)} className="back-button">
-                Back
+                Назад
             </button>
         </div>
     );

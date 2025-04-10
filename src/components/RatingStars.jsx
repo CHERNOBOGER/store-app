@@ -7,7 +7,7 @@ const RatingStars = ({ rating }) => {
         <div className="rating">
             {[...Array(5)].map((_, i) => (
                 <span key={i} className={i < roundedRating ? 'star filled' : 'star'}>
-          {i < roundedRating ? '★' : '☆'}
+          ★
         </span>
             ))}
         </div>

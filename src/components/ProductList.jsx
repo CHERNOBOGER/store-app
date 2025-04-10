@@ -22,12 +22,10 @@ const ProductList = () => {
             <h1>All Products</h1>
             <div className="products-grid">
                 {products.map(product => (
-                    <div key={product.id} className="product-card">
-                        <Link to={`/product/${product.id}`} className="product-title">
-                            {product.title}
-                        </Link>
+                    <Link to={`/product/${product.id}`} key={product.id} className="product-card">
+                        <div className="product-title">{product.title}</div>
                         <RatingStars rating={product.rating.rate} />
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
